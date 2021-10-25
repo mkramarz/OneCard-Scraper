@@ -7,7 +7,7 @@ def fetchCurrentTotal(username, password):
     url = "https://onecard.mcgill.ca/Login.aspx"
 
     #First, we navigate to the page 
-    driver = webdriver.Firefox(executable_path='drivers\geckodriver.exe') #TODO: Running a headless driver
+    driver = webdriver.Firefox(executable_path='geckodriver.exe') #TODO: Running a headless driver
     driver.implicitly_wait(30)
     driver.get(url)
     driver.find_element(By.ID, "tbUserName").send_keys(username)
